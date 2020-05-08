@@ -3,7 +3,7 @@ locals {
 }
 
 resource "aws_lambda_function" "example" {
-    function_name = "ServerlessExample-pbugno"
+    function_name = "ServerlessExample-function"
     filename = local.lambda_file
     source_code_hash = "${filebase64sha256(local.lambda_file)}"
     handler = "sample_handler.lambda_handler"
